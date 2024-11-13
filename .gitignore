@@ -1,0 +1,5 @@
+# Ignore all YAML files in the data folder
+data/*.yaml
+
+# Unignore sample.yaml
+!data/sample.yaml
