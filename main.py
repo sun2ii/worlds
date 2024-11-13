@@ -1,5 +1,6 @@
-from utils.world_creator import create_world
-from utils.world_viewer import print_main_menu_text, view_worlds
+from utils.create_world import create_world
+from utils.utils import print_main_menu_text
+from utils.view_worlds import view_worlds
 
 
 def main():
@@ -16,6 +17,8 @@ def main():
         else:
             print("select 1, 2, or x")
 
+
+# Exit the program immediately
 
 if __name__ == "__main__":
     main()
