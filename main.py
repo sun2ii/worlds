@@ -3,9 +3,6 @@ import re
 import subprocess
 from datetime import datetime
 
-# main.py
-from utils.tasks import add_task_to_project, complete_task, list_tasks
-
 # Terminal color codes
 RESET = "\033[0m"  # Reset all attributes
 BLACK = "\033[30m"
@@ -103,27 +100,6 @@ T5.
             break
         else:
             print("select 1, 2, or x")
-
-
-def manage_tasks(project):
-    while True:
-        print(
-            f"{GREEN}l{RESET}ist tasks, {GREEN}a{RESET}dd task, {GREEN}c{RESET}omplete task, e{GREEN}x{RESET}it to main menu"
-        )
-        choice = input(f"Choose an option for project '{project['name']}': ")
-
-        if choice == "l":
-            list_tasks(project)
-        elif choice == "a":
-            description = input("Enter task description: ")
-            add_task_to_project(project, description)
-        elif choice == "c":
-            task_id = int(input("Enter task ID to complete: "))
-            complete_task(project, task_id)
-        elif choice == "x":
-            break
-        else:
-            print("Invalid choice, please try again.")
 
 
 if __name__ == "__main__":
