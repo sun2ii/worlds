@@ -18,7 +18,5 @@ def main():
             print("select 1, 2, or x")
 
 
-# Exit the program immediately
-
 if __name__ == "__main__":
     main()
